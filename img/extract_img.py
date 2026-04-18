@@ -74,6 +74,6 @@ if __name__ == "__main__":
 
     extract_frames(
         video_path=video_file,
-        fps=4.0,
+        fps=2.0,
         output_dir="frames"
     )

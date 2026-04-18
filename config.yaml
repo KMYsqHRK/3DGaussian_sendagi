@@ -2,7 +2,7 @@
 # 動作環境: NVIDIA RTX 3050 (VRAM 8GB)
 
 project:
-  name: "room_archive_sh1"
+  name: "room_archive_sh1_reso1"
   root: "."
 
 paths:
@@ -15,8 +15,8 @@ paths:
   gaussian_splatting: "gaussian-splatting"
 
 preprocess:
-  max_long_side: 1200
-  blur_threshold: 60.0
+  max_long_side: 800
+  blur_threshold: 40.0
   output_format: "jpg"
   jpeg_quality: 95
 

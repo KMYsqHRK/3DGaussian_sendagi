@@ -13,10 +13,11 @@ python src/render.py --config config.yaml
 rm -rf img/frames
 rm -rf data/processed
 rm -rf data/colmap/
+rm -rf data/training/
+
 python src/run_colmap.py --config config.yaml
 
 # 学習データ再準備
-rm -rf data/training/
 python src/prepare_training.py --config config.yaml
 
 # 学習再実行
