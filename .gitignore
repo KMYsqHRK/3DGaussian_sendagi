@@ -15,8 +15,8 @@ data/training/
 # 学習済みモデル・レンダリング結果（容量大）
 output/
 
-# 3DGS 公式実装（サブモジュールまたはクローン）
-gaussian-splatting/
+# 3DGS 公式実装（サブモジュールとして管理）
+# gaussian-splatting/  # サブモジュールのため除外しない
 
 # TensorBoard ログ
 runs/
