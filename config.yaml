@@ -16,7 +16,7 @@ paths:
 
 preprocess:
   max_long_side: 1200
-  blur_threshold: 50.0
+  blur_threshold: 60.0
   output_format: "jpg"
   jpeg_quality: 95
 
