@@ -89,3 +89,9 @@ python src/render.py --config config.yaml
 - 3DGS 公式実装は `PINHOLE` モデルのみ対応（`assert model == "PINHOLE"` でチェックされる）
 - `config.yaml` の `camera_model` を `OPENCV` → `PINHOLE` に変更
 - COLMAP の再実行が必要（Step 2〜3 をやり直し）
+
+### 3DGS 学習完了
+
+- 30,000 イテレーションの学習が正常に完了
+- 出力モデル: `output/models/room_archive/point_cloud/iteration_30000/point_cloud.ply`
+- 3D表示: https://supersplat.io に .ply をドラッグ&ドロップで確認可能
