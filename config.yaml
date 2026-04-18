@@ -16,14 +16,14 @@ paths:
 
 preprocess:
   max_long_side: 1200
-  blur_threshold: 100.0
+  blur_threshold: 10.0
   output_format: "jpg"
   jpeg_quality: 95
 
 colmap:
   matcher: "exhaustive"
   use_gpu: true
-  camera_model: "OPENCV"
+  camera_model: "PINHOLE"
   single_camera: true
 
 training:

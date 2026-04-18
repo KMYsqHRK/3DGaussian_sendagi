@@ -3,15 +3,18 @@
 学習済み 3DGS モデルから任意視点の画像を生成し、PSNR/SSIM を計算する。
 """
 
+from __future__ import annotations
+
 import argparse
 import subprocess
 import sys
 from pathlib import Path
+from typing import Optional
 
 import yaml
 
 
-def render(config_path: str, model_path: str | None = None) -> None:
+def render(config_path: str, model_path: Optional[str] = None) -> None:
     with open(config_path) as f:
         config = yaml.safe_load(f)
 

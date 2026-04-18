@@ -76,3 +76,16 @@ python src/render.py --config config.yaml
 - `.gitignore` から `gaussian-splatting/` の除外を解除
 - `git submodule add` でサブモジュール登録
 - `git submodule update --init --recursive` でサブモジュール（SIBR_viewers, diff-gaussian-rasterization, fused-ssim, simple-knn, glm）を初期化
+
+### Python 3.9 互換性修正
+
+- `str | None` (Python 3.10+) → `Optional[str]` に修正
+- `list[str]` → `List[str]` に修正
+- `from __future__ import annotations` を追加
+- 対象: `colmap_utils.py`, `image_utils.py`, `render.py`
+
+### カメラモデル修正: OPENCV → PINHOLE
+
+- 3DGS 公式実装は `PINHOLE` モデルのみ対応（`assert model == "PINHOLE"` でチェックされる）
+- `config.yaml` の `camera_model` を `OPENCV` → `PINHOLE` に変更
+- COLMAP の再実行が必要（Step 2〜3 をやり直し）

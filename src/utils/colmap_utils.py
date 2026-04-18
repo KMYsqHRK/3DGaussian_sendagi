@@ -1,8 +1,11 @@
 """COLMAP ユーティリティ"""
 
+from __future__ import annotations
+
 import subprocess
 import shutil
 from pathlib import Path
+from typing import List, Optional
 
 
 def check_colmap_installed() -> bool:
@@ -10,7 +13,7 @@ def check_colmap_installed() -> bool:
     return shutil.which("colmap") is not None
 
 
-def run_colmap_command(args: list[str], log_file: str | None = None) -> subprocess.CompletedProcess:
+def run_colmap_command(args: List[str], log_file: Optional[str] = None) -> subprocess.CompletedProcess:
     """COLMAP コマンドを実行し、結果を返す。"""
     cmd = ["colmap"] + args
     print(f"実行: {' '.join(cmd)}")

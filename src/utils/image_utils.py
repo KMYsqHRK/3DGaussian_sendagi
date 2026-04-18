@@ -1,8 +1,11 @@
 """画像処理ユーティリティ"""
 
+from __future__ import annotations
+
 import cv2
 import numpy as np
 from pathlib import Path
+from typing import List, Tuple
 from PIL import Image
 
 
@@ -27,7 +30,7 @@ def resize_image(image_path: str, max_long_side: int) -> Image.Image:
     return img.resize((new_w, new_h), Image.LANCZOS)
 
 
-def get_image_files(directory: str, extensions: tuple = (".jpg", ".jpeg", ".png", ".bmp", ".tiff")) -> list[Path]:
+def get_image_files(directory: str, extensions: Tuple[str, ...] = (".jpg", ".jpeg", ".png", ".bmp", ".tiff")) -> List[Path]:
     """指定ディレクトリから画像ファイルを取得しソートして返す。"""
     dir_path = Path(directory)
     files = []
