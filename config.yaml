@@ -2,7 +2,7 @@
 # 動作環境: NVIDIA RTX 3050 (VRAM 8GB)
 
 project:
-  name: "room_archive_sh1_reso1"
+  name: "room_archive_sh1_reso1_movie5"
   root: "."
 
 paths:
@@ -16,7 +16,7 @@ paths:
 
 preprocess:
   max_long_side: 800
-  blur_threshold: 40.0
+  blur_threshold: 30.0
   output_format: "jpg"
   jpeg_quality: 95
 
